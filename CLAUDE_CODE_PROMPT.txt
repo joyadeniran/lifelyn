@@ -1,0 +1,135 @@
+# Claude Code: Lifelyn Landing Page Build Prompt
+
+**Copy and paste everything below into a new Claude Code session:**
+
+---
+
+Build a production-grade Next.js landing page for **Lifelyn** (www.trylifelyn.com).
+
+**Brief overview:**
+- Lifelyn is the access & revenue-cycle layer for African healthcare providers
+- Goal: Prove to investors it's real + convert hospital CTOs to book demos
+- Tech: Next.js 14+ with Tailwind CSS, deploy to Vercel
+- Domain: www.trylifelyn.com
+
+**Design system (locked):**
+- Colors: Dark background (#0A1414), teal accent (#2DD4BF), warm off-white text (#F5F1E8)
+- Typography: Georgia serif for headers, Calibri sans for body
+- Style: Minimal, professional, no AI-generated aesthetic (no full-width color bars)
+- Use the attached design-tokens.json for all spacing, colors, animations
+
+**Page sections (in order, all on one page):**
+
+1. **Hero:** 
+   - Headline: "Every patient request, captured. Every appointment, kept. **Every claim, paid.**"
+   - Subheading: "The access & revenue-cycle layer for Africa's healthcare providers."
+   - Two CTAs: "Book a demo" (primary, teal bg) + "View investor deck" (secondary, outline)
+   - No hero image; rely on color and typography
+
+2. **Problem Statement:**
+   - Section: "The chaos at the front door"
+   - 3 stat cards (220 min wait, 33% no-shows, <23% EMR adoption)
+   - 2–3 sentences of context
+   - Use teal accent border on stat cards
+
+3. **Solution / How It Works:**
+   - Section: "One operating layer that turns patient demand into paid care"
+   - 5-step flow diagram (Patient Request → Capture → Schedule → Visit → Claim)
+   - Each step: italic number + title + 1-line description
+   - Arrows between steps (→), stack vertically on mobile
+
+4. **Why Lifelyn (Value Props):**
+   - 4 cards in 2×2 grid (2-col on mobile):
+     1. EMR-agnostic (works with any hospital system)
+     2. Offline-first (built for Nigerian power/connectivity)
+     3. HMO-native (real-time eligibility, claims packaging)
+     4. Data moat (proprietary access dataset)
+   - Icon + title + 1-sentence description per card
+
+5. **Market Opportunity:**
+   - "Opportunity" heading + TAM/SAM/SOM visual
+   - 3 nested boxes/rectangles: TAM $2.1B → SAM $420M → SOM $48M
+   - Stat line: "18–23% EMR adoption in Nigeria vs 96% in US"
+   - Investor-focused but clear to all readers
+
+6. **Go-to-Market / 3-Phase Timeline:**
+   - "How we're building this" heading
+   - 3 cards (1 row, or stack on mobile):
+     - Phase 1 (Now–Q2 2026): "Design partners & wedge" + 2–3 bullets
+     - Phase 2 (Q2–Q4 2026): "Channel partnerships" + 2–3 bullets
+     - Phase 3 (2027+): "Scale & financing" + 2–3 bullets
+   - Use accent color for phase numbers
+
+7. **Team & Advisors:**
+   - "The team" heading
+   - 3 founder cards (photo placeholder + name + role + 1-line bio)
+     - [Founder Name] — CEO & Co-founder
+     - [Co-founder Name] — CTO & Co-founder
+     - [Advisor Name] — Medical Director / Advisor
+   - Use placeholder images (e.g., Unsplash or placeholder.com)
+
+8. **CTA Section (Demo Booking):**
+   - Heading: "See Lifelyn in action"
+   - Subheading: "Book a 15-minute demo. We'll show you how to reduce no-shows by 50%."
+   - Primary CTA: "Book a demo" (link to placeholder Calendly URL)
+   - Fallback: "or email founders@lifelyn.health"
+   - Centered, minimal design
+
+9. **Footer:**
+   - Logo + "Lifelyn" text
+   - Links: About, Blog, Docs, Privacy, Terms (all href="#" for now)
+   - Social: LinkedIn, Twitter placeholders (href="#")
+   - Copyright: "© 2026 Lifelyn. All rights reserved."
+   - Dark background (#0F1C1C), sparse layout
+
+**Technical requirements:**
+- Framework: Next.js 14+ (App Router)
+- Styling: Tailwind CSS (install with `npm install -D tailwindcss`)
+- Images: Use `next/image` component for all images
+- Responsive: Mobile-first design, test on phone/tablet/desktop
+- Performance: Aim for Lighthouse >90 (LCP <2.5s, CLS <0.1)
+- Accessibility: Semantic HTML, heading hierarchy, color contrast WCAG AA
+- Deployment: Deploy-ready for Vercel (no env secrets needed yet)
+
+**Placeholders to include (you'll replace later):**
+- Calendly URL: `https://calendly.com/lifelyn/demo` (link in book-demo CTA)
+- Email: `founders@lifelyn.health`
+- Team photos: Use placeholder.com or Unsplash URLs (e.g., `https://via.placeholder.com/400`)
+- Pitch deck link: `/files/lifelyn-pitch-deck.pdf` (you'll upload the PDF to public/files/ later)
+- Social links: Use `#` for now (LinkedIn, Twitter)
+
+**Files attached to this session:**
+- design-tokens.json — Use this for all colors, spacing, fonts
+- lifelyn-pitch-deck.html — Reference for design patterns (ignore content, focus on style)
+- lifelyn-landing-brief.md — Full detailed brief (section descriptions, tone, etc.)
+
+**Build order:**
+1. Set up Next.js project with Tailwind
+2. Build Hero section first
+3. Add Problem Statement section
+4. Build How It Works (flow diagram)
+5. Build Why Lifelyn cards
+6. Build Market Opportunity (TAM/SAM/SOM)
+7. Build GTM Timeline
+8. Build Team section
+9. Build Demo CTA section
+10. Build Footer
+11. Add global styling (backgrounds, responsive layout)
+12. Test responsiveness and Lighthouse
+
+**After build:**
+- Run `npm run build` and fix any errors
+- Commit with clear commit messages (e.g., "add hero section", "add team cards")
+- Provide deployment instructions (Vercel link)
+
+**Stop condition:**
+You're done when:
+- All 9 sections are visible and responsive
+- Tailwind styling matches design tokens
+- Lighthouse score is >85 (aim for >90)
+- No broken links or placeholder text errors
+- README includes deploy instructions
+
+---
+
+**Ready? Start by scaffolding the Next.js project and setting up Tailwind, then build the Hero section first.**

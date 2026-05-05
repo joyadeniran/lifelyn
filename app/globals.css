@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #0A1414;
+  --bg-soft: #0F1C1C;
+  --ink: #F5F1E8;
+  --ink-soft: #C8C0A8;
+  --ink-mute: #8A8270;
+  --accent: #2DD4BF;
+  --accent-deep: #0F766E;
+  --signal: #FF6B35;
+  --gold: #E5B567;
+  --line: rgba(245, 241, 232, 0.12);
+  --line-strong: rgba(245, 241, 232, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter-tight), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.3);
+  color: #ffffff;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[10px] uppercase tracking-[0.2em];
+    color: var(--accent);
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition duration-200 hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-color: var(--accent);
+    color: var(--bg);
+    --tw-ring-color: var(--accent);
+    --tw-ring-offset-color: var(--bg);
+  }
+
+  .button-secondary {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border px-6 text-sm font-semibold transition duration-200 hover:bg-white/[0.05] focus:outline-none focus:ring-2 focus:ring-offset-2;
+    border-color: var(--line-strong);
+    background-color: rgba(255, 255, 255, 0.02);
+    color: var(--ink);
+    --tw-ring-color: var(--accent);
+    --tw-ring-offset-color: var(--bg);
+  }
+
+  .surface {
+    @apply border bg-white/[0.02] shadow-panel backdrop-blur-md;
+    border-color: var(--line);
+  }
+
+  .surface-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(245, 241, 232, 0.025) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+
+  .field {
+    @apply h-12 w-full rounded-lg border px-4 text-sm outline-none transition placeholder:text-ink-mute focus:ring-2;
+    background-color: var(--bg-soft);
+    border-color: var(--line);
+    color: var(--ink);
+    --tw-ring-color: rgba(45, 212, 191, 0.2);
+  }
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-fraunces), serif;
+  font-variation-settings: "opsz" 100;
+}
